@@ -1,0 +1,14 @@
+Failed to execute MI command:
+-data-evaluate-expression (((((pStream)->stream).object)).g_type_instance)
+Error message from debugger back end:
+Cannot access memory at address 0x1000100010001
+
+Failed to execute MI command:
+-data-evaluate-expression (pStream)->stream
+Error message from debugger back end:
+Cannot access memory at address 0x0
+
+Failed to execute MI command:
+-data-evaluate-expression *(pszGuid)
+Error message from debugger back end:
+Cannot access memory at address 0x0

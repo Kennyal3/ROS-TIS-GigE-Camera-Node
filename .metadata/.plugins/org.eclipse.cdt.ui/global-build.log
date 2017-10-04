@@ -1,0 +1,21 @@
+16:58:28 **** Incremental Build of configuration Debug for project camera_aravis_0.4.1 ****
+make all 
+Building file: ../src/camera_node.cpp
+Invoking: GCC C++ Compiler
+g++ -I/opt/ros/kinetic/include -I/opt/ros/kinetic/include/xmlrpcpp -I"/home/auto3/catkin_ws/src/camera_aravis_0.4.1/include/driver_base" -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/home/auto3/aravis-0.4.1/src -I/usr/include/glib-2.0 -I"/home/auto3/catkin_ws/src/camera_aravis_0.4.1/cfg/cpp/camera_aravis" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/camera_node.d" -MT"src/camera_node.o" -o "src/camera_node.o" "../src/camera_node.cpp"
+Finished building: ../src/camera_node.cpp
+ 
+Building target: camera_aravis_0.4.1
+Invoking: GCC C++ Linker
+g++ -L/opt/ros/kinetic/lib -L/home/auto3/aravis-0.4.1/src -o "camera_aravis_0.4.1"  ./src/camera_node.o   -lroscpp -ldynamic_reconfigure_config_init_mutex -lcamera_info_manager -limage_transport -ltf -lgobject-2.0 -lglib-2.0 -lgthread-2.0 -lm -laravis-0.4 -lpthread -lboost_system -lxmlrpcpp -lrosconsole -lroscpp_serialization -lrostime
+Finished building target: camera_aravis_0.4.1
+ 
+16:59:26 **** Incremental Build of configuration Debug for project camera_aravis_0.4.1 ****
+make all 
+make: Nothing to be done for 'all'.
+17:01:59 **** Incremental Build of configuration Debug for project camera_aravis_0.4.1 ****
+make all 
+make: Nothing to be done for 'all'.
+18:41:00 **** Incremental Build of configuration Debug for project camera_aravis_0.4.1 ****
+make all 
+make: Nothing to be done for 'all'.

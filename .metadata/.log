@@ -1,0 +1,19 @@
+!SESSION 2017-10-03 15:47:22.066 -----------------------------------------------
+eclipse.buildId=4.7.1.M20170906-1700
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-10-03 16:19:07.404
+!MESSAGE Indexed 'camera_aravis_0.4.1' (1 sources, 2,190 headers) in 89.4 sec: 135,213 declarations; 815,052 references; 0 unresolved inclusions; 0 syntax errors; 13 unresolved names (0.0014%)
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-10-03 16:23:24.133
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-10-03 16:23:24.134
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2017-10-03 17:02:32.568
+!MESSAGE Unable to locate file: /build/glibc-bfm8X4/glibc-2.23/nptl/../sysdeps/unix/sysv/linux/x86_64/pthread_cond_timedwait.S
