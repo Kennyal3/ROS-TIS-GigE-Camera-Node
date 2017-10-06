@@ -83,7 +83,7 @@ struct global_s
 	image_transport::CameraPublisher 		publisher;
 	camera_info_manager::CameraInfoManager *pCameraInfoManager;
 	sensor_msgs::CameraInfo 				camerainfo;
-	gint 									width, height; // buffer->width and buffer->height not working, so I used a global.
+	guint 									width, height; // buffer->width and buffer->height not working, so I used a global.
 	Config 									config;
 	Config 									configMin;
 	Config 									configMax;
@@ -122,7 +122,7 @@ struct global_s
 	int										mtu;
 	int										Acquire;
 	const char							   *keyAcquisitionFrameRate;
-#ifdef TUNING
+#ifdef TUNINGTRUE
 	ros::Publisher 							*ppubInt64;
 #endif
 
@@ -167,7 +167,7 @@ ArvGvStream *CreateStream(void)
 	if (pStream)
 	{
 		ArvBuffer	*pBuffer;
-		gint 		 nbytesPayload;
+		guint 		 nbytesPayload;
 
 
 		if (!ARV_IS_GV_STREAM (pStream))
@@ -528,8 +528,17 @@ static void NewBuffer_callback (ArvStream *pStream, ApplicationData *pApplicatio
 			sensor_msgs::Image msg;
 
         	pApplicationdata->nBuffers++;
-			std::vector<uint8_t> this_data((arv_buffer_get_image_width (pBuffer))*(arv_buffer_get_image_height (pBuffer))); //
-			memcpy(&this_data[0], arv_buffer_get_user_data (pBuffer), (arv_buffer_get_image_width (pBuffer))*(arv_buffer_get_image_height (pBuffer)));//
+
+//			std::vector<uint8_t> this_data(pBuffer->size);
+//			memcpy(&this_data[0], pBuffer->data, pBuffer->size);
+
+			size_t pSize = 0;
+			const void *pData = arv_buffer_get_data(pBuffer, &pSize);
+			std::vector<uint8_t> this_data(pSize);
+			memcpy(&this_data[0], pData, pSize);
+
+//			std::vector<uint8_t> this_data((arv_buffer_get_image_width (pBuffer))*(arv_buffer_get_image_height (pBuffer))); //
+//			memcpy(&this_data[0], arv_buffer_get_user_data (pBuffer), (arv_buffer_get_image_width (pBuffer))*(arv_buffer_get_image_height (pBuffer)));//
 
 
 			// Camera/ROS Timestamp coordination.
